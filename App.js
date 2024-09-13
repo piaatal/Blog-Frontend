@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:3001/blogs'); // Replace with your backend API URL
+        const response = await fetch('http://localhost:10000/blogs'); // Replace with your backend API URL
         const data = await response.json();
         setBlogs(data);
       } catch (error) {
@@ -21,7 +21,7 @@ function App() {
 
   const handleAddBlog = async (newBlog) => {
     try {
-      const response = await fetch('http://localhost:3001/blogs', {
+      const response = await fetch('http://localhost:10000/blogs', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
